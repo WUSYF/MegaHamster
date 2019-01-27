@@ -1,0 +1,20 @@
+{
+    "name": "htl3r/megaham_v3",
+    "description": "Daniel's Megahamster Projekt aus der 4BI",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Daniel",
+            "email": "6140@htl.rennweg.at"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "HTL3R\\megaham_v3\\": "classes/"
+        }
+    },
+    "require": {
+        "typo3fluid/fluid": "^2.5",
+        "typo3/fluid-schema-generator": "^2.1"
+    }
+}

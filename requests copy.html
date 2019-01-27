@@ -1,0 +1,14 @@
+<script>
+    fetch("http://megapig.local:87/index.php?id=1&format=json")
+        .then(function (response){
+            return response.json();
+        })
+        .then(function (myJson) {
+            let json = JSON.parse(JSON.stringify(myJson));
+            for(let x = 0; x < json["Products"].length; x++){
+                let div = document.createElement("div");
+                div.innerText = `${json["Products"][x]["name"]} offers you a width of ${json["Products"][x]["width"]} cm, a height of ${json["Products"][x]["height"]} cm for the price of just ${json["Products"][x]["price"]} €`;
+                document.getElementsByTagName("body")[0].appendChild(div);
+            }
+        })
+</script>
